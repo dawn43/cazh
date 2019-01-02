@@ -1,0 +1,21 @@
+html
+	head
+		link(href='/css/bootstrap.min.css', rel='stylesheet')
+		title=title
+	body(style='margin-top: 120px')
+		div.container
+			div.row
+				div.col-md-4.offset-md-4
+					div.card.border-primary(style='border-radius: 0px;')
+						div.card-header.bg-primary.text-white.text-center(style='border-radius: 0px;')
+							h4 Login
+						div.card-body
+							form(method='post', action='http://localhost:3000/login/process')
+								div.form-group.row
+									label(for='username') Username
+									input.form-control(type='text', name='username')
+								div.form-group.row
+									label(for='password') Password
+									input.form-control(type='password', name='password')
+								div.text-center
+									button.btn.btn-sm.btn-primary(type='submit', style='border-radius: 0px;') Login

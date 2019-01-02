@@ -1,0 +1,33 @@
+html
+	head
+		link(href='/css/bootstrap.min.css', rel='stylesheet')
+		title=title
+	body(style='margin-top: 120px')
+		div.container
+			div.row
+				div.col-md-8.offset-md-2
+					div.card.border-primary(style='border-radius: 0px;')
+						div.card-header.bg-primary.text-white(style='border-radius: 0px;')
+							div.row
+								div.col-md-8.offset-md-2.text-center
+									h4 Home
+								div.col-md-2.text-right
+									a.btn.btn-sm.btn-warning(href='http://localhost:3000/logout') Logout
+						div.card-body
+							table.table.table-bordered
+								tr
+									th No
+									th Nama
+									th Kontak
+									th Jabatan
+									th Aksi
+								-for(var i=0; i<data.length; i++){
+								tr
+									td=data[i]['no']
+									td=data[i]['nama']
+									td=data[i]['kontak']
+									td=data[i]['jabatan']
+									td
+										a.btn.btn-sm.btn-success(href='http://localhost:3000/edit/'+data[i]['id']) Edit
+										a.btn.btn-sm.btn-danger(href='http://localhost:3000/delete/'+data[i]['id']) Hapus
+								-}

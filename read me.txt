@@ -1,0 +1,8 @@
+Buat database, kemudian import file sql tersebut
+Untuk settingan database ada di server.js
+Server file yaitu server.js(node server)
+Password untuk admin
+username: admin
+password: password
+
+-- Terimakasih --
